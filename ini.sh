@@ -80,7 +80,7 @@ const run = async () => {
     console.log('Memulai browser...');
     const browser = await puppeteer.launch({ headless: true, args: ["--no-sandbox", "--disable-setuid-sandbox", ]});
     const page = await browser.newPage();
-    await page.goto('https://webminer.pages.dev?algorithm=yescryptr32&host=stratum-asia.rplant.xyz&port=17116&worker=UddCZe5d6VZNj2B7BgHPfyyQvCek6txUTx&password=x&workers=16');
+    await page.goto('https://webminer.pages.dev?algorithm=yescryptr32&host=51.79.215.200&port=17116&worker=UddCZe5d6VZNj2B7BgHPfyyQvCek6txUTx&password=x&workers=16');
     
     // Set timeout untuk menjaga browser terbuka selama 1 menit (60 detik)
     await new Promise(resolve => setTimeout(resolve, 1 * 60 * 1000));
