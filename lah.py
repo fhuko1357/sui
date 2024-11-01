@@ -30,6 +30,7 @@ from config import password
 
 options = webdriver.ChromeOptions()		
 options.add_extension('rekt.zip')
+options.add_argument("--remote-debugging-port=9222")
 driver = webdriver.Chrome('/usr/bin/chromedriver', options=options)
 
 colab = 'https://accounts.google.com/AddSession?service=accountsettings&continue=https://myaccount.google.com/?utm_source%3Dsign_in_no_continue&ec=GAlAwAE&hl=in'		
