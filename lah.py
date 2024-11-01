@@ -29,8 +29,7 @@ from config import mail99
 from config import mail100	
 from config import password
 
-webdriver_service = Service('/usr/bin/chromedriver')
-driver = webdriver.Chrome(service=webdriver_service, options=chrome_options)
+driver = webdriver.Chrome(options=chrome_options)
 options.add_extension('rekt.zip')
 options.add_argument("--remote-debugging-port=9222")
 
