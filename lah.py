@@ -1,5 +1,6 @@
 from selenium import webdriver		
 from selenium.webdriver.chrome.options import Options		
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver import ActionChains		
 from selenium.webdriver.common.keys import Keys		
 from selenium.webdriver.support.ui import WebDriverWait		
@@ -32,6 +33,7 @@ options = webdriver.ChromeOptions()
 options.add_extension('rekt.zip')
 options.add_argument("--remote-debugging-port=9222")
 driver = webdriver.Chrome(options=options)
+webdriver_service = Service('/usr/bin/chromedriver')
 
 colab = 'https://accounts.google.com/AddSession?service=accountsettings&continue=https://myaccount.google.com/?utm_source%3Dsign_in_no_continue&ec=GAlAwAE&hl=in'		
 driver.implicitly_wait(1200) # seconds		
