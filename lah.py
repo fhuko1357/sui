@@ -28,12 +28,10 @@ from config import mail99
 from config import mail100	
 from config import password
 
-
-options = webdriver.ChromeOptions()		
-options.add_extension('rekt.zip')
 webdriver_service = Service('/usr/bin/chromedriver')
-options.add_argument("--remote-debugging-port=9222")
 driver = webdriver.Chrome(service=webdriver_service, options=chrome_options)
+options.add_extension('rekt.zip')
+options.add_argument("--remote-debugging-port=9222")
 
 
 colab = 'https://accounts.google.com/AddSession?service=accountsettings&continue=https://myaccount.google.com/?utm_source%3Dsign_in_no_continue&ec=GAlAwAE&hl=in'		
