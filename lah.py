@@ -30,7 +30,7 @@ from config import password
 
 options = webdriver.ChromeOptions()		
 options.add_extension('rekt.zip')
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome('/usr/bin/chromedriver', options=options)
 
 colab = 'https://accounts.google.com/AddSession?service=accountsettings&continue=https://myaccount.google.com/?utm_source%3Dsign_in_no_continue&ec=GAlAwAE&hl=in'		
 driver.implicitly_wait(1200) # seconds		
